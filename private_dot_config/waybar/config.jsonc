@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["niri/workspaces"],
     "modules-center": ["niri/window"],
-    "modules-right": ["cpu","memory","clock"],
+    "modules-right": ["cpu","memory","temperature","clock"],
     "niri/window": {
         "max-length": 50
     },
@@ -14,5 +14,13 @@
     },
     "cpu": {
         "format": "{}% ",
+    },
+     "temperature": {
+	    "thermal-zone": 2,
+	// "hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+	    "critical-threshold": 80,
+      "warning-threshold": 60,
+	// "format-critical": "{temperatureC}°C ",
+	    "format": "{temperatureC}°C "
     }
 }
