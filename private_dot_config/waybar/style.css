@@ -2,7 +2,7 @@
 
 * {
   font-family: Agave Nerd Font Mono;
-  font-size: 17px;
+  font-size: 16px;
   min-height: 0;
 }
 
@@ -43,7 +43,8 @@
 #battery,
 #pulseaudio,
 #custom-lock,
-#custom-power {
+#custom-power,
+#temperature {
   background-color: @surface0;
   padding: 0.5rem 1rem;
   margin: 5px 0;
@@ -105,4 +106,12 @@
 #tray {
   margin-right: 1rem;
   border-radius: 1rem;
+}
+
+#temperature.warnig {
+  color: @yellow;
+}
+
+#temperature.warnig {
+  color: @red;
 }
